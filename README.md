@@ -28,7 +28,3 @@ docker volume prune
 ```bash
 docker-compose up --build
 ```
-
-### Informe del proyecto
-
-Informe esta en el archivo apodado "Informe proyecto 2.pdf"
