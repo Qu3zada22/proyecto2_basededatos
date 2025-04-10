@@ -31,4 +31,4 @@ docker-compose up --build
 
 ### Informe del proyecto
 
-[Informe escrito](Informe_proyecto_2.pdf)
+Informe esta en el archivo apodado "Informe proyecto 2.pdf"
