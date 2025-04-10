@@ -31,4 +31,4 @@ docker-compose up --build
 
 ### Informe del proyecto
 
-[Informe Proyecto 2](https://uvggt-my.sharepoint.com/:w:/g/personal/que23643_uvg_edu_gt/EYqPJ1v1zapCvReSGCSke6oB50N88tX-vjaZIpiY1Qdf_Q)
+[Informe escrito](Informe_proyecto_2.pdf)
