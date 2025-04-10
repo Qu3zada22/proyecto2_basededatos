@@ -1,0 +1,32 @@
+
+services:
+  postgres:
+    image: postgres:14
+    container_name: proyecto2-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin123
+      POSTGRES_DB: reservas
+    ports:
+      - "5430:5432"
+    volumes:
+      - ./db/01_ddl.sql:/docker-entrypoint-initdb.d/01_ddl.sql
+      - ./db/02_data.sql:/docker-entrypoint-initdb.d/02_data.sql
+    networks:
+      - proyecto2-net
+
+  app:
+    build: ./app  # Construye la imagen desde el Dockerfile en /app
+    container_name: proyecto2-app
+    depends_on:
+      - postgres
+    environment:
+      DB_HOST: postgres  # Usa el nombre del servicio como host
+      DB_NAME: reservas
+      DB_USER: admin
+      DB_PASSWORD: admin123
+    networks:
+      - proyecto2-net
+
+networks:
+  proyecto2-net:
